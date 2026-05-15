@@ -17,8 +17,8 @@ The project is built using modern web technologies to ensure performance, mainta
 ### Design Choices
 The entire application adopts a **"Corporate Tech"** design language. We implemented a unified aesthetic relying heavily on subtle dotted borders (`border-dotted border-primary/40`), rounded pill-shaped headers, and a dark-mode-first approach. 
 * **Single-Page Application (SPA) Flow:** The homepage utilizes a seamless scroll-based navigation system with anchor tags (`#events`, `#projects`, `#team`), allowing users to glide through content effortlessly.
-* **Component Isolation:** Features like the `BlogSection` and `TeamSection` are fully modular. We also implemented dedicated dynamic routing (e.g., `/blog/[slug]`) for distraction-free reading environments when a user clicks into an article.
-* **Minimalist Contact & Footer:** Instead of loud, glowing elements, we opted for clean, airy, and professional aesthetics for the communication sections, emphasizing usability and class.
+* **Component Isolation:** Features like the `BlogSection` and `TeamSection` are fully modular. I also implemented dedicated dynamic routing (e.g., `/blog/[slug]`) for distraction-free reading environments when a user clicks into an article.
+* **Minimalist Contact & Footer:** Instead of loud, glowing elements, I opted for clean, airy, and professional aesthetics for the communication sections, emphasizing usability and class.
 
 ---
 
