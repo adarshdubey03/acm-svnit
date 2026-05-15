@@ -60,14 +60,17 @@ export function Navbar() {
     };
   }, []);
 
-  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
-    e.preventDefault();
+  const handleNavClick = (e: React.MouseEvent<HTMLAnchorElement>, path: string) => {
+    // If we are NOT on the homepage, let the browser handle a hard navigation to the homepage with the hash.
+    // This perfectly fixes the bug in Next.js App Router where cross-page hash navigation doesn't update the URL bar.
     if (pathname !== "/") {
-      router.push("/" + path);
-      setIsMobileMenuOpen(false);
+      e.preventDefault();
+      window.location.href = "/" + path;
       return;
     }
 
+    // If we ARE on the homepage, prevent default jump and do a smooth scroll
+    e.preventDefault();
     if (path.startsWith("#")) {
       const id = path.substring(1);
       const element = document.getElementById(id);
@@ -108,11 +111,12 @@ export function Navbar() {
             <div className="hidden md:flex flex-none items-center space-x-1">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.path.substring(1);
+                const targetPath = pathname === "/" ? link.path : `/${link.path}`;
                 return (
                   <a
                     key={link.name}
-                    href={link.path}
-                    onClick={(e) => handleScroll(e, link.path)}
+                    href={targetPath}
+                    onClick={(e) => handleNavClick(e, link.path)}
                     className={clsx(
                       "relative px-4 py-2 text-sm font-medium transition-colors rounded-full",
                       isActive ? "text-primary-foreground" : "text-muted-foreground hover:text-foreground"
@@ -167,11 +171,12 @@ export function Navbar() {
             <div className="p-4 space-y-1">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.path.substring(1);
+                const targetPath = pathname === "/" ? link.path : `/${link.path}`;
                 return (
                   <a
                     key={link.name}
-                    href={link.path}
-                    onClick={(e) => handleScroll(e, link.path)}
+                    href={targetPath}
+                    onClick={(e) => handleNavClick(e, link.path)}
                     className={clsx(
                       "block px-4 py-3 rounded-xl text-base font-medium transition-all",
                       isActive
