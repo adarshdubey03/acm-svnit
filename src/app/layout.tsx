@@ -18,6 +18,10 @@ const jetbrainsMono = JetBrains_Mono({
 export const metadata: Metadata = {
   title: "ACM SVNIT Chapter",
   description: "Official website of the ACM SVNIT Student Chapter.",
+  icons: {
+    icon: "/logo.png",
+    apple: "/logo.png",
+  },
 };
 
 export default function RootLayout({
