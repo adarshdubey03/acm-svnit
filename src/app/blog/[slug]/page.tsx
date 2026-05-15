@@ -5,11 +5,12 @@ import Link from "next/link";
 import { Metadata } from "next";
 
 interface BlogPageProps {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }
 
 export async function generateMetadata({ params }: BlogPageProps): Promise<Metadata> {
-  const blog = blogs.find(b => b.slug === params.slug);
+  const { slug } = await params;
+  const blog = blogs.find(b => b.slug === slug);
   if (!blog) return { title: "Blog Not Found | ACM SVNIT" };
   
   return {
@@ -24,8 +25,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: BlogPageProps) {
-  const blog = blogs.find(b => b.slug === params.slug);
+export default async function BlogPost({ params }: BlogPageProps) {
+  const { slug } = await params;
+  const blog = blogs.find(b => b.slug === slug);
 
   if (!blog) {
     notFound();
