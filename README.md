@@ -1,7 +1,5 @@
 # ACM SVNIT - Official Chapter Website
 
-![ACM SVNIT Logo](public/logo.png)
-
 Welcome to the official repository for the **Association for Computing Machinery (ACM) Student Chapter at SVNIT Surat** website. This platform serves as the central hub for our community, showcasing our upcoming events, hackathons, team members, tech blogs, and open-source projects.
 
 ## Project Description
@@ -41,9 +39,9 @@ Our roadmap for expanding this platform includes:
 
 | Domain   | Technologies / Frameworks / Tools |
 |----------|-----------------------------------|
-| Frontend | React.js, Next.js, Tailwind CSS, Framer Motion, TypeScript, HTML/CSS |
-| Backend  | Node.js, Express.js, Python, PostgreSQL, MongoDB |
+| Frontend | PHP, React.js, Next.js, Tailwind CSS, Framer Motion, TypeScript, HTML/CSS |
+| Backend  | Node.js, Express.js, PostgreSQL, Prisma, MongoDB, Mongoose |
 | AI       | Prompt Engineering, OpenAI API, Gemini API |
-| ML       | Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy |
-| DevOps   | Git, GitHub Actions, Docker, Vercel, AWS |
-| Other    | C/C++, Java, System Design, RESTful APIs, Agile Methodologies |
+| ML       | - |
+| DevOps   | Git, GitHub Actions, Docker, Vercel, Railway, Postman, Bruno, Laragon |
+| Other    | C/C++, System Design, RESTful APIs|
