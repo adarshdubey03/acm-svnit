@@ -1,6 +1,4 @@
-# ACM SVNIT - Official Chapter Website
-
-Welcome to the official repository for the **Association for Computing Machinery (ACM) Student Chapter at SVNIT Surat** website. This platform serves as the central hub for our community, showcasing our upcoming events, hackathons, team members, tech blogs, and open-source projects.
+# ACM SVNIT 
 
 ## Project Description
 
