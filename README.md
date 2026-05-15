@@ -1,36 +1,49 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# ACM SVNIT - Official Chapter Website
 
-## Getting Started
+![ACM SVNIT Logo](public/logo.png)
 
-First, run the development server:
+Welcome to the official repository for the **Association for Computing Machinery (ACM) Student Chapter at SVNIT Surat** website. This platform serves as the central hub for our community, showcasing our upcoming events, hackathons, team members, tech blogs, and open-source projects.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Project Description
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### Overview
+The ACM SVNIT website is designed to be a high-end, responsive, and visually striking platform that reflects our commitment to advancing computing as a science and profession. It provides seamless access to chapter resources, event registrations, and community updates.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Architecture
+The project is built using modern web technologies to ensure performance, maintainability, and a stellar user experience:
+* **Framework:** Next.js 14+ (App Router)
+* **Language:** TypeScript
+* **Styling:** Tailwind CSS (v4)
+* **Animations:** Framer Motion
+* **Icons:** Lucide React & React Icons
+* **Deployment:** Vercel (Optimized for static generation and serverless edge functions)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Design Choices
+The entire application adopts a **"Corporate Tech"** design language. We implemented a unified aesthetic relying heavily on subtle dotted borders (`border-dotted border-primary/40`), rounded pill-shaped headers, and a dark-mode-first approach. 
+* **Single-Page Application (SPA) Flow:** The homepage utilizes a seamless scroll-based navigation system with anchor tags (`#events`, `#projects`, `#team`), allowing users to glide through content effortlessly.
+* **Component Isolation:** Features like the `BlogSection` and `TeamSection` are fully modular. We also implemented dedicated dynamic routing (e.g., `/blog/[slug]`) for distraction-free reading environments when a user clicks into an article.
+* **Minimalist Contact & Footer:** Instead of loud, glowing elements, we opted for clean, airy, and professional aesthetics for the communication sections, emphasizing usability and class.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## Future Scope
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Our roadmap for expanding this platform includes:
+1. **CMS Integration:** Migrating hardcoded data (`src/data/`) to a headless CMS (like Sanity or Contentful) to allow non-technical committee members to update events and blogs instantly.
+2. **Member Dashboard:** A secure login portal using NextAuth.js for chapter members to track their event participations, access exclusive resources, and view their certificates.
+3. **Automated Event Registration:** Integrating a backend database (PostgreSQL) and mailing service (Resend) to handle RSVP ticketing directly on the site.
+4. **MDX Blog Engine:** Upgrading the current static blog data structure to `MDX` or `Contentlayer` for rich-text article formatting and code-snippet rendering.
+5. **Interactive Gallery:** A Masonry-style media gallery to visually document past hackathons like Dotslash and Echelon.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Skills Matrix
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Domain   | Technologies / Frameworks / Tools |
+|----------|-----------------------------------|
+| Frontend | React.js, Next.js, Tailwind CSS, Framer Motion, TypeScript, HTML/CSS |
+| Backend  | Node.js, Express.js, Python, PostgreSQL, MongoDB |
+| AI       | Prompt Engineering, OpenAI API, Gemini API |
+| ML       | Scikit-learn, TensorFlow, PyTorch, Pandas, NumPy |
+| DevOps   | Git, GitHub Actions, Docker, Vercel, AWS |
+| Other    | C/C++, Java, System Design, RESTful APIs, Agile Methodologies |
