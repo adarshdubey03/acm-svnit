@@ -12,7 +12,7 @@ The project is built using modern web technologies to ensure performance, mainta
 * **Styling:** Tailwind CSS (v4)
 * **Animations:** Framer Motion
 * **Icons:** Lucide React & React Icons
-* **Deployment:** Vercel (Optimized for static generation and serverless edge functions)
+* **Deployment:** Vercel 
 
 ### Design Choices
 The entire application adopts a **"Corporate Tech"** design language. We implemented a unified aesthetic relying heavily on subtle dotted borders (`border-dotted border-primary/40`), rounded pill-shaped headers, and a dark-mode-first approach. 
